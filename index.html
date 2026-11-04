@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT ToolBox - Ultimate Intelligence Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">⚡ OSINT ToolBox</div>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Rechercher un outil, un mot clé...">
+        </div>
+        <div class="stats" id="stats">0 outils</div>
+    </header>
+
+    <nav class="categories">
+        <button class="cat-btn active" data-cat="all">Tous</button>
+        <button class="cat-btn" data-cat="username">👤 Username</button>
+        <button class="cat-btn" data-cat="email">📧 Email</button>
+        <button class="cat-btn" data-cat="phone">📱 Téléphone</button>
+        <button class="cat-btn" data-cat="domain">🌐 Domaine / IP</button>
+        <button class="cat-btn" data-cat="social">💬 Réseaux</button>
+        <button class="cat-btn" data-cat="image">🖼️ Image</button>
+        <button class="cat-btn" data-cat="geo">📍 Géoloc</button>
+        <button class="cat-btn" data-cat="people">🧑 Personnes</button>
+        <button class="cat-btn" data-cat="company">🏢 Entreprise</button>
+        <button class="cat-btn" data-cat="darkweb">🕵️ Dark Web</button>
+        <button class="cat-btn" data-cat="doc">📄 Documents</button>
+        <button class="cat-btn" data-cat="tools">🛠️ Frameworks</button>
+        <button class="cat-btn" data-cat="leaks">💧 Leaks</button>
+    </nav>
+
+    <main id="grid"></main>
+
+    <footer>
+        <p>⚡ OSINT ToolBox — Outils externes d'investigation en sources ouvertes. À utiliser dans un cadre légal.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
