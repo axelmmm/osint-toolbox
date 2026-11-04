@@ -10,12 +10,11 @@
     <header>
         <div class="logo">⚡ OSINT ToolBox</div>
         <div class="search-container">
-            <input type="text" id="search" placeholder="Rechercher un outil, un mot clé...">
+            <input type="text" id="search" placeholder="Rechercher un outil, un mot clé..." autocomplete="off">
         </div>
         <div class="stats" id="stats">0 outils</div>
     </header>
 
-    <!-- Section de Recherche Directe par Cible -->
     <section class="direct-search-section">
         <h2>🔍 Recherche Directe OSINT</h2>
         <div class="search-box-wrapper">
@@ -23,13 +22,15 @@
                 <option value="username">👤 Pseudo / Username</option>
                 <option value="email">📧 Adresse Email</option>
                 <option value="domain">🌐 Domaine / IP</option>
-                <option value="geo">📍 Coordonnées GPS</option>
+                <option value="geo">📍 Lieu / Coordonnées GPS</option>
+                <option value="phone">📱 Téléphone</option>
             </select>
-            <input type="text" id="target-input" placeholder="Entrez une cible (pseudo, email, domaine)...">
-            <button id="launch-search-btn">Lancer la recherche ↗</button>
+            <input type="text" id="target-input" placeholder="Entrez un pseudo..." autocomplete="off">
+            <button id="launch-search-btn">Lancer la recherche</button>
         </div>
-        <div id="quick-links-container" class="quick-links"></div>
     </section>
+
+    <section id="results" class="results" hidden></section>
 
     <nav class="categories">
         <button class="cat-btn active" data-cat="all">Tous</button>
@@ -54,6 +55,7 @@
         <p>⚡ OSINT ToolBox — Outils externes d'investigation en sources ouvertes. À utiliser dans un cadre légal.</p>
     </footer>
 
+    <div id="toast"></div>
     <script src="data.js"></script>
     <script src="app.js"></script>
 </body>
