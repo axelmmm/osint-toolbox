@@ -7,7 +7,7 @@ const tools = [
   { name: "Instant Username", cat: "username", desc: "Recherche instantanée et simultanée de pseudonymes sur plus de 100 plateformes sociales.", url: "https://instantusername.com/" },
   { name: "UserSearch.org", cat: "username", desc: "Moteur d'investigation inversée pour retrouver des comptes secrets liés à un pseudo.", url: "https://usersearch.org/" },
   { name: "Knowem", cat: "username", desc: "Vérifie la présence d'une marque ou d'un pseudo sur plus de 500 réseaux et bases de marques.", url: "https://knowem.com/" },
-  { name: "Namecheckr", cat: "username", desc: "Analyse rapide de disponibilité de noms d'utilisateur pour préserver l'identité numérique.", url: "https://www.namecheckr.com/" },
+  { name: "Namecheckr", cat: "username", desc: "Analyse rapide de disponibilité d'noms d'utilisateur pour préserver l'identité numérique.", url: "https://www.namecheckr.com/" },
   { name: "Blackbird", cat: "username", desc: "Outil de recherche ultra-rapide écrit en C++ pour débusquer les comptes d'une cible.", url: "https://github.com/p1ngul1n0/blackbird" },
   { name: "Social-Scan", cat: "username", desc: "Vérificateur de pseudonymes et emails haute performance sans faux positifs.", url: "https://github.com/qeeqbox/social-scan" },
 

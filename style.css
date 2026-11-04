@@ -90,6 +90,97 @@ header {
     border: 1px solid rgba(0, 240, 255, 0.3);
 }
 
+/* Style de la section de recherche directe */
+.direct-search-section {
+    max-width: 900px;
+    margin: 25px auto 10px auto;
+    padding: 25px;
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.direct-search-section h2 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: var(--accent-blue);
+    font-family: 'Fira Code', monospace;
+}
+
+.search-box-wrapper {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#search-type {
+    padding: 12px;
+    background: rgba(6, 9, 14, 0.9);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-main);
+    outline: none;
+    cursor: pointer;
+}
+
+#target-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px;
+    background: rgba(6, 9, 14, 0.9);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: #fff;
+    outline: none;
+}
+
+#target-input:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+#launch-search-btn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#launch-search-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--neon-shadow);
+}
+
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.quick-link-btn {
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-size: 0.85em;
+    transition: background 0.2s;
+}
+
+.quick-link-btn:hover {
+    background: rgba(0, 240, 255, 0.15);
+}
+
 .categories {
     display: flex;
     flex-wrap: wrap;

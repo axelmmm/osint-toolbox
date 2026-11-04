@@ -52,3 +52,63 @@ document.querySelectorAll('.cat-btn').forEach(btn => {
 
 search.addEventListener('input', render);
 render();
+
+// --- Moteur de recherche directe par cible ---
+const searchEngines = {
+  username: [
+    { name: "WhatsMyName", url: (target) => `https://whatsmyname.app/` },
+    { name: "Google (Dork)", url: (target) => `https://www.google.com/search?q="${encodeURIComponent(target)}"` },
+    { name: "GitHub", url: (target) => `https://github.com/search?q=${encodeURIComponent(target)}&type=users` }
+  ],
+  email: [
+    { name: "Have I Been Pwned", url: (target) => `https://haveibeenpwned.com/account/${encodeURIComponent(target)}` },
+    { name: "Epieos", url: (target) => `https://epieos.com/?q=${encodeURIComponent(target)}` },
+    { name: "Google (Dork)", url: (target) => `https://www.google.com/search?q="${encodeURIComponent(target)}"` }
+  ],
+  domain: [
+    { name: "Shodan", url: (target) => `https://www.shodan.io/search?query=${encodeURIComponent(target)}` },
+    { name: "VirusTotal", url: (target) => `https://www.virustotal.com/gui/search/${encodeURIComponent(target)}` },
+    { name: "SecurityTrails", url: (target) => `https://securitytrails.com/domain/${encodeURIComponent(target)}/dns` }
+  ],
+  geo: [
+    { name: "Google Maps", url: (target) => `https://www.google.com/maps/search/${encodeURIComponent(target)}` },
+    { name: "SunCalc", url: (target) => `https://www.suncalc.org/#/${encodeURIComponent(target)}` }
+  ]
+};
+
+const targetInput = document.getElementById('target-input');
+const searchType = document.getElementById('search-type');
+const launchBtn = document.getElementById('launch-search-btn');
+const quickLinksContainer = document.getElementById('quick-links-container');
+
+function executeDirectSearch() {
+  const target = targetInput.value.trim();
+  const type = searchType.value;
+
+  if (!target) {
+    alert("Veuillez entrer une valeur à rechercher.");
+    return;
+  }
+
+  const engines = searchEngines[type];
+  if (!engines) return;
+
+  quickLinksContainer.innerHTML = '';
+
+  engines.forEach(engine => {
+    const linkUrl = engine.url(target);
+    const linkBtn = document.createElement('a');
+    linkBtn.className = 'quick-link-btn';
+    linkBtn.href = linkUrl;
+    linkBtn.target = '_blank';
+    linkBtn.rel = 'noopener';
+    linkBtn.textContent = `Ouvrir sur ${engine.name} ↗`;
+    quickLinksContainer.appendChild(linkBtn);
+  });
+
+  window.open(engines[0].url(target), '_blank');
+}
+
+if (launchBtn) {
+  launchBtn.addEventListener('click', executeDirectSearch);
+}
