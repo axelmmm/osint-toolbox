@@ -66,7 +66,7 @@ const tools = [
   { name: "Forensically", cat: "image", desc: "Suite complète d'analyse forensique (ELA, analyse de clarté, extraction de métadonnées).", url: "https://29a.ch/photo-forensics/" },
   { name: "FotoForensics", cat: "image", desc: "Analyse Error Level Analysis (ELA) pour détecter les altérations et retouches photo.", url: "http://fotoforensics.com/" },
   { name: "InVID Project", cat: "image", desc: "Boîte à outils de vérification des faits (fact-checking) pour images et vidéos d'actualité.", url: "https://www.invid-project.eu/" },
-  { name: "Exif tool Jeffrey", cat: "meta", desc: "Visionneuse de données EXIF en ligne permettant d'extraire les coordonnées GPS d'une photo.", url: "http://exif.regex.info/exif.cgi" },
+  { name: "Exif tool Jeffrey", cat: "image", desc: "Visionneuse de données EXIF en ligne permettant d'extraire les coordonnées GPS d'une photo.", url: "http://exif.regex.info/exif.cgi" },
   { name: "SauceNAO", cat: "image", desc: "Moteur de recherche inversée d'images spécialisé dans les illustrations et dessins.", url: "https://saucenao.com/" },
 
   // ==================== GEO ====================
